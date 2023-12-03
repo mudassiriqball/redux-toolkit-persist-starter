@@ -1,0 +1,15 @@
+@import '../../styles/theme.scss';
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .outlet {
+    max-width: 100%;
+    min-width: 100%;
+    flex: content;
+    min-height: 100%;
+  }
+}

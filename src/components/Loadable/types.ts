@@ -1,0 +1,1 @@
+export type ComponentTypeT<T> = React.ComponentType<T>;

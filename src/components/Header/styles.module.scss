@@ -1,0 +1,102 @@
+@import '../../styles/theme.scss';
+
+$header-lg: 80px;
+$header-sm: 60px;
+
+.wrapper {
+  position: sticky;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 80px;
+    height: $header-lg;
+    background: $header-bg;
+    backdrop-filter: blur(10px);
+
+    >div {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: white;
+
+      img {
+        height: 40px;
+        cursor: pointer;
+      }
+    }
+
+    button {
+      height: max-content;
+    }
+  }
+
+  .offcanvas {
+    width: 80% !important;
+
+    .logo_text {
+      color: $primary;
+    }
+
+    .offcanvas_body {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+      >div {
+        width: fit-content;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+        user-select: none;
+        cursor: pointer;
+        color: #000000;
+        opacity: 0.5;
+        padding-bottom: 4px;
+
+        &:hover {
+          opacity: 0.6;
+        }
+
+        &.active {
+          font-weight: 700;
+          color: $primary;
+          opacity: 1;
+          border-bottom: 3px solid $primary;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .wrapper .header {
+    padding: 0px 40px;
+  }
+}
+
+@media screen and (max-width: 576.98px) {
+  .wrapper .header {
+    padding: 0px 8px;
+    height: $header-sm;
+    gap: 0px;
+
+    >img {
+      width: 80px;
+      left: calc(50% - 40px);
+    }
+  }
+}
+
+@media screen and (max-width: 340.98px) {
+  .wrapper .header img {
+    display: none;
+  }
+}
